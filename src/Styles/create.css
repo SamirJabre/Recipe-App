@@ -1,0 +1,14 @@
+.create-recipe-container{
+    background-color: aqua;
+    margin: auto;
+    width: 90%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.create-recipe{
+    background-color: red;
+    width: 90%;
+    height: 90%;
+}
