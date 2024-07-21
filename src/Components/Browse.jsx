@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import '../Styles/browse.css'
+import gsap from 'gsap'
 
 function Browse() {
+  
+
   return (
     <div className="recipe-container">
         <div className="content">

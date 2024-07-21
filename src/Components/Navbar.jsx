@@ -1,8 +1,10 @@
 import React from 'react'
 import '../Styles/navbar.css'
+import gsap from 'gsap'
 
 function Navbar() {
-  
+  gsap.from('.container' , {y:'-100%', ease: 'bounce'})
+
   return (
     <nav>
       <div></div>
