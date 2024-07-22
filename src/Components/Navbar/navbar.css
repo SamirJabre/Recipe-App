@@ -24,22 +24,11 @@ nav{
     align-items: center;
     font-size: 3rem;
 }
+.container p{
+    cursor: pointer;
+}
 .sign-in-log-in-btns{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.sign-in-log-in-btns button{
-    margin: 10px;
-    padding: 20px;
-    width: 100px;
-    border: 3px solid black;
-    border-radius: 10px;
-    background-color: rgb(205, 205, 205);
-    font-size: 15px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-.sign-in-log-in-btns button:hover{
-    background-color: white;
 }

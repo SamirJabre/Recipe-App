@@ -1,0 +1,96 @@
+.details-container{
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+}
+.details{
+    justify-content: space-between;
+    display: flex;
+    margin: auto;
+    height: 80%;
+    width: 65%;
+    border: 2px solid grey;
+    border-radius: 20px;
+    background-color: rgb(144, 173, 173);
+}
+.left-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 40%;
+}
+.left-detail div{
+    height: 100%;
+    width: 90%;
+    padding: 0px 0px 0px 10px;
+}
+.right-detail{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recipe-detail{
+    height: 80%;
+    width: 95%;
+}
+.info{
+    width: 100%;
+    height: 10%;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.info p{
+    overflow: hidden;
+    max-width: 77%;
+    height: 50%;
+    margin-left: 20px;
+    font-size: 20px;
+}
+#comment-form{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#comment-form textarea{
+    background-color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+}
+#comment-form label{
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+#star-selection{
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 10px;
+}
+#submit-comment{
+    align-self: center;
+    padding: 10px;
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: aliceblue;
+}

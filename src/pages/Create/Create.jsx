@@ -1,8 +1,11 @@
 import React from 'react'
-import '../Styles/create.css'
+import './create.css'
+import Navbar from '../../Components/Navbar/Navbar'
 
 function Create() {
   return (
+    <>
+    <Navbar/>
     <div className="create-recipe-container">
         <div className="create-recipe">
             <div className="left-side">
@@ -25,6 +28,7 @@ function Create() {
             </div>
         </div>
     </div>
+    </>
   )
 }
 
