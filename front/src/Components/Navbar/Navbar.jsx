@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './navbar.css'
 import gsap from 'gsap'
 import Button from '../../base/Button/Button'
@@ -14,6 +14,8 @@ function Navbar() {
   let navigate = useNavigate();
   
 
+  const [isLogged,setIsLogged]=useState(false)
+
 
   return (
     
@@ -24,8 +26,9 @@ function Navbar() {
             <p onClick={()=>navigate('/create')}>Create</p>
         </div>
         <div className="sign-in-log-in-btns">
-        <Button name={"Log In"}/>
-        <Button name={"Sign In"} clickFunction={()=>navigate('/signup')}/>
+          {isLogged ? <Button name={"Log Out"}/>  : <>
+        <Button name={"Log In"} clickFunction={()=>navigate('/login')} />
+        <Button name={"Sign In"} clickFunction={()=>navigate('/signup')}/></>}
         </div>
     </nav>
   )

@@ -3,6 +3,8 @@ session_start();
 
 require("./connection.php");
 
+if ($_SERVER['REQUEST_METHOD'] == "GET") {
+
     $stmt = $conn->prepare("SELECT recipe_id, title, ingrediants, steps, image FROM recipes"); 
     $stmt->execute();
     $result = $stmt->get_result();
@@ -13,4 +15,7 @@ require("./connection.php");
         }
         echo json_encode($recipes);
     }
+}else{
+    return false;
+}
 ?>

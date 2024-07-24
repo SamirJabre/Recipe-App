@@ -3,28 +3,29 @@ import './browse.css'
 import gsap from 'gsap'
 import Navbar from '../../Components/Navbar/Navbar'
 import RecipeCard from '../../Components/RecipeCard/RecipeCard'
+import { recipeRemote } from '../../data_source/remote/recipe'
+import axios from 'axios'
 
 function Browse() {
+  const fetchRecipes=async()=>{
+    await axios.get('http://localhost/Recipe-App/back/API/getrecipes.php')
+    .then((result)=>{result.json()
+      console.log(result);
+    })
+  }
 
-  useEffect(()=>{
-    fetch('http://localhost/Recipe-Backend/API/getrecipes.php')
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(err => console.log("errorr occurd"))
+  useEffect(async ()=>{
+    fetchRecipes()
   },[])
   
 
   return (
     <>
     <Navbar/>
-    <RecipeCard/>
-    <RecipeCard/>
-    <RecipeCard/>
-    <RecipeCard/>
-    <RecipeCard/>
-    <RecipeCard/>
-    <RecipeCard/>
-    <RecipeCard/>
+    <div className="recipe-display">
+      <RecipeCard title={"TAboule"} description={"ASDKHJASFHGASK"}  image={"https://i0.wp.com/media.zeinaskitchen.se/2017/01/29541044_874036196125961_7591093746887057773_n.jpg?fit=550%2C550&ssl=1"}/>
+      <RecipeCard title={"TAasddasdboule"} description={"ASDKHJASFHGASK"}  image={"https://i0.wp.com/media.zeinaskitchen.se/2017/01/29541044_874036196125961_7591093746887057773_n.jpg?fit=550%2C550&ssl=1"}/>
+    </div>
     </>
   )
 }
